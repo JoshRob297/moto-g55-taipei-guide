@@ -16,6 +16,8 @@ Deleting these files directly from read-only system partitions triggers Android 
 
 ## 2. Systemless Overlay Neutralization via Magisk
 
+> **Best Practice Tip:** During initial setup after a clean flash, skip Wi-Fi configuration during the first-boot wizard. This ensures the system boots cleanly without downloading background carrier configuration profiles before you activate Magisk and install the debloater module.
+
 With root access, Magisk allows **systemless overlay mounting**—making specific package directories appear completely empty to the Android OS upon boot without altering physical disk blocks:
 
 ```text
