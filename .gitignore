@@ -1,0 +1,26 @@
+# Binaries and ROM images
+*.zip
+!moto_g55_carrier_debloater_*.zip
+*.7z
+*.tar.gz
+*.img
+*.bin
+sparsechunk.*
+
+# Secrets & State
+.env
+*.state.json
+.*.json
+*.token
+*.log
+*.tmp
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Internal drafts & templates
+templates/
+*.bbcode

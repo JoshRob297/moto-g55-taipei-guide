@@ -1,0 +1,6 @@
+id=moto_g55_carrier_debloater
+name=Motorola Carrier & Telemetry Debloater
+version=v2.0
+versionCode=200
+author=JoshRob
+description=Systemlessly disables carrier background services, telemetry, and device management overlays on Motorola Moto G55 5G (XT2435-1 / taipei).

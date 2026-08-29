@@ -1,0 +1,27 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Shell script syntax check
+        run: |
+          bash -n scripts/flash_all.sh
+          bash -n scripts/build_module.sh
+          bash -n scripts/backup_critical_partitions.sh
+          bash -n magisk-module/service.sh
+
+      - name: Test Magisk module build
+        run: |
+          ./scripts/build_module.sh
+          unzip -t moto_g55_carrier_debloater_v2.0.zip
